@@ -1,0 +1,37 @@
+# site info
+title: Elf on the Run
+email:
+twitter:
+facebook:
+year: 2017
+
+# google_analytics: ""
+
+# author info
+author: 2 of Cups Design
+author-email:
+author-twitter:
+author-facebook:
+
+# config info
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# YAML defaults
+defaults:
+  -layout: page
+
+# included with build
+include:
+  -about
+  -get-involved
+  -partner
+
+# excluded from build
+exclude:
+  -package.json
+  -package-lock.json
+  -node_modules
+  -gulpfile.js
+  -.gitignore

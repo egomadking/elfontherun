@@ -1,0 +1,25 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egomadking/elfontherun.git"
+  },
+  "author": "Roy Mosby",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egomadking/elfontherun/issues"
+  },
+  "homepage": "https://github.com/egomadking/elfontherun#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.6.3",
+    "lodash": "^4.17.4"
+  }
+}
