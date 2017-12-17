@@ -1,0 +1,40 @@
+.topbar-sticky-shrink {
+  padding: 2rem;
+  transition: padding 0.25s ease;
+  
+}
+
+.is-stuck .topbar-sticky-shrink {
+  padding: .25rem;
+  transition: padding 0.25s ease;
+}
+
+[data-sticky] {
+  width: 100%;
+}
+
+.topbar-sticky-shrink-header {
+  text-align: center;
+  padding: 1rem .25rem;
+ 
+}
+
+.top-bar, .dropdown.menu {
+  background-color: rgb(29, 155, 80);
+}
+
+a {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a::after {
+  border-color: #fff transparent transparent
+
+}
+
+.button {
+  background-color: rgb(236, 33, 43);
+  margin: 0;
+}
