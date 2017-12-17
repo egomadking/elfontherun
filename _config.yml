@@ -23,16 +23,7 @@ defaults:
   -layout: page
 
 # included with build
-include:
-  -about
-  -get-involved
-  -partner
+include: [about, get-involved, partner]
 
 # excluded from build
-exclude:
-  -package.json
-  -package-lock.json
-  -node_modules
-  -gulpfile.js
-  -.gitignore
-  -notes
+exclude: [.gitignore, notes]
