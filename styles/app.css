@@ -30,11 +30,41 @@ a {
 }
 
 .dropdown.menu>li.is-dropdown-submenu-parent>a::after {
-  border-color: #fff transparent transparent
+  border-color: #fff transparent transparent;
 
+}
+
+.drilldown .is-drilldown-submenu-parent>a::after {
+  border-color: transparent transparent transparent #fff ;
 }
 
 .button {
   background-color: rgb(236, 33, 43);
   margin: 0;
+}
+
+.drilldown a {
+  background: rgb(29, 155, 80);
+}
+
+.top-bar ul {
+  background-color: rgb(29, 155, 80);
+}
+
+.drilldown .is-drilldown-submenu {
+  background-color: rgb(29, 155, 80);
+}
+
+.no-js .top-bar {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .no-js .top-bar {
+    display: block;
+  }
+
+  .no-js .title-bar {
+    display: none;
+  }
 }

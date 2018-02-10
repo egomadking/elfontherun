@@ -17,3 +17,9 @@ Browsersync will then open a new browser window with `localhost:3000` and automa
 ### Other decisions
 
 I am going with the Foundation CSS instead of SASS. At this point, I'm torn was to whether I want to invest in learning a framework when grid and flex are becoming common options. I would have more control from a-z and would be able to keep file-size to a minimum by only including content that is needed for the project.
+
+## 10 Feb
+
+[Snow](https://codepen.io/loktar00/pen/CHpGo?page=1&)
+
+Typewriter header 
