@@ -22,4 +22,4 @@ I am going with the Foundation CSS instead of SASS. At this point, I'm torn was 
 
 [Snow](https://codepen.io/loktar00/pen/CHpGo?page=1&)
 
-Typewriter header 
+Typewriter header
