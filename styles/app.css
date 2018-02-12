@@ -1,12 +1,25 @@
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.title-bar {
+  background-color: rgb(29, 155, 80);
+}
+
 .topbar-sticky-shrink {
   padding: 2rem;
   transition: padding 0.25s ease;
-  
 }
 
 .is-stuck .topbar-sticky-shrink {
-  padding: .25rem;
+  padding: 0.25rem;
   transition: padding 0.25s ease;
+}
+
+.is-stuck .coin {
+  width: 50px;
+  height: 50px;
+  transition: 0.25s ease;
 }
 
 [data-sticky] {
@@ -15,11 +28,11 @@
 
 .topbar-sticky-shrink-header {
   text-align: center;
-  padding: 1rem .25rem;
- 
+  padding: 1rem 0.25rem;
 }
 
-.top-bar, .dropdown.menu {
+.top-bar,
+.dropdown.menu {
   background-color: rgb(29, 155, 80);
 }
 
@@ -29,13 +42,16 @@ a {
   font-size: 1.5em;
 }
 
-.dropdown.menu>li.is-dropdown-submenu-parent>a::after {
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
   border-color: #fff transparent transparent;
-
 }
 
-.drilldown .is-drilldown-submenu-parent>a::after {
-  border-color: transparent transparent transparent #fff ;
+.drilldown .is-drilldown-submenu-parent > a::after {
+  border-color: transparent transparent transparent #fff;
+}
+
+.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
+  border-color: #fff transparent transparent;
 }
 
 .button {
@@ -59,12 +75,77 @@ a {
   display: none;
 }
 
+.coin {
+  width: 100px;
+  height: 100px;
+  transition: 0.25s ease;
+}
+
+.mini-coin {
+  width: 40px;
+  height: 40px;
+}
+
+#marquee {
+  height: 400px;
+  background: rgb(255, 48, 25);
+  background: -moz-linear-gradient(top, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 100%);
+  background: -webkit-linear-gradient(top, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 100%);
+  background: linear-gradient(to bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404', GradientType=0);
+}
+
+canvas{
+
+    background-image: linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
+    background-image: -o-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
+    background-image: -moz-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
+    background-image: -ms-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
+    
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(255, 48, 25)),
+        color-stop(0.84, rgb(207, 4, 4))
+    );
+}
+
+.mission {
+    color: rgb(255, 48, 25);
+  font-size: 8em;
+}
+
+.mission-pre {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.mission-suffix {
+  font-family: Sacramento, cursive;
+}
+
+.mission-sub {
+  color: #999;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 4em;
+}
+
 @media screen and (min-width: 40em) {
   .no-js .top-bar {
     display: block;
   }
-
   .no-js .title-bar {
     display: none;
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .mission {
+    font-size: 4em;
+  }
+  .mission-sub {
+    font-size: 2.5em;
   }
 }
