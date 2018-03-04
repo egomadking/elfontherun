@@ -1,5 +1,5 @@
 body {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
 .title-bar {
@@ -118,6 +118,9 @@ canvas{
         color-stop(0.84, rgb(207, 4, 4))
     );
 }
+.twinkle-container {
+  margin-bottom: 2em;
+}
 
 .mission {
     color: rgb(255, 48, 25);
@@ -139,6 +142,38 @@ canvas{
   font-size: 4em;
 }
 
+.get-involved {
+  background-color: rgb(255,48,25);
+  color: #fff;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.get-involved h1, .elves-in-action h1 {
+  font-size: 8em;
+}
+
+.get-involved h2 {
+  margin-top: 1em;
+  color: #000;
+}
+
+.get-involved--link-icon {
+  max-height: 200px;
+  max-width: 200px;
+  margin-top: 0.75em;
+}
+
+.get-involved--link-icon:hover {
+  animation: wobble 1.5s steps(60) 1;
+  filter: drop-shadow( 0px 0px 5px #000)
+}
+
+.get-involved--link-container {
+  margin-top: 1em;
+  background-color: #fff;
+}
+
 @media screen and (min-width: 40em) {
   .no-js .top-bar {
     display: block;
@@ -149,10 +184,54 @@ canvas{
 }
 
 @media screen and (max-width: 39.9375em) {
-  .mission {
+  .mission, .get-involved h1, .elves-in-action h1{
     font-size: 4em;
   }
   .mission-sub {
     font-size: 2.5em;
+  }
+}
+
+/* CSS motion effects*/
+
+@keyframes wobble {
+  0% {
+    transform: rotate(0turn);
+    filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.5))
+  }
+  10% {
+    transform: rotate(0.1turn) scale(1.1, 1.1);
+    filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, 0.5))
+  }
+  20% {
+    transform: rotate(0.0turn);
+    filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.5))
+  }
+  30% {
+    transform: rotate(-0.1turn);
+    filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, 0.5))
+  }
+  40% {
+    transform: rotate(0.0turn) scale(0.9, 0.9)
+  }
+  50% {
+    transform: rotate(0.1turn)
+  }
+  60% {
+    transform: rotate(0.0turn)
+  }
+  70% {
+    transform: rotate(-0.1turn) scale(1.1, 1.1);
+    filter: drop-shadow( 0px 0px 10px #000)
+  }
+  80% {
+    transform: rotate(0.0turn);
+  }
+  90% {
+    transform: rotate(0.5turn);
+  }
+  100% {
+    transform: rotate(1turn);
+    filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, 0.5))
   }
 }
