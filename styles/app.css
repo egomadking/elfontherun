@@ -2,8 +2,43 @@ body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
+a {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+a:hover,
+.dropdown.menu .is-active>a {
+  color: rgb(132, 252, 180);
+}
+
+.button,
+#mc_embed_signup .button {
+  background-color: rgb(255, 48, 25);
+  font-size: 1.2em;
+  font-weight: 800;
+  margin: 0;
+
+}
+
+.button:hover,
+#mc_embed_signup .button:hover {
+  background-color: rgb(255, 110, 90);
+}
+
+.button:focus {
+  background-color: rgb(255, 48, 25);
+}
+
+/*MENU related*/
+
 .title-bar {
   background-color: rgb(29, 155, 80);
+}
+
+.top-bar {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .topbar-sticky-shrink {
@@ -43,27 +78,16 @@ body {
   background-color: rgb(29, 155, 80);
 }
 
-a {
-  color: rgb(255, 255, 255);
-  font-weight: 800;
-  font-size: 1.5em;
-}
-
-.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+.dropdown.menu>li.is-dropdown-submenu-parent>a::after {
   border-color: #fff transparent transparent;
 }
 
-.drilldown .is-drilldown-submenu-parent > a::after {
+.drilldown .is-drilldown-submenu-parent>a::after {
   border-color: transparent transparent transparent #fff;
 }
 
-.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after {
   border-color: #fff transparent transparent;
-}
-
-.button {
-  background-color: rgb(236, 33, 43);
-  margin: 0;
 }
 
 .drilldown a {
@@ -93,38 +117,17 @@ a {
   height: 40px;
 }
 
-#marquee {
-  height: 400px;
-  background: rgb(255, 48, 25);
-  background: -moz-linear-gradient(top, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 100%);
-  background: -webkit-linear-gradient(top, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 100%);
-  background: linear-gradient(to bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404', GradientType=0);
+canvas {
+  background-image: linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
+  background-image: -o-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
+  background-image: -moz-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
+  background-image: -webkit-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
+  background-image: -ms-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
+  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(255, 48, 25)), color-stop(0.84, rgb(207, 4, 4)));
 }
 
-canvas{
-
-    background-image: linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
-    background-image: -o-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
-    background-image: -moz-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
-    background-image: -webkit-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
-    background-image: -ms-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
-    
-    background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0, rgb(255, 48, 25)),
-        color-stop(0.84, rgb(207, 4, 4))
-    );
-}
 .twinkle-container {
   margin-bottom: 2em;
-}
-
-.mission {
-    color: rgb(255, 48, 25);
-  font-size: 8em;
 }
 
 .mission-pre {
@@ -143,14 +146,29 @@ canvas{
 }
 
 .get-involved {
-  background-color: rgb(255,48,25);
-  color: #fff;
-  overflow: hidden;
-  padding-bottom: 10px;
+  overflow: hidden; /* fix for animated links x-resizing page */
 }
 
-.get-involved h1, .elves-in-action h1 {
+.mission h1 {
+  color: rgb(255, 48, 25);
   font-size: 8em;
+}
+
+.twinkle-container,
+.get-involved,
+.elves-in-action,
+.upcoming-events {
+  padding-bottom: 8em;
+}
+
+.get-involved h1,
+.elves-in-action h1,
+.upcoming-events h1,
+.mailer-signup h1 {
+  color: #fff;
+  font-size: 8em;
+  background-color: rgb(255, 48, 25);
+  margin-bottom: 0.5em;
 }
 
 .get-involved h2 {
@@ -165,14 +183,24 @@ canvas{
 }
 
 .get-involved--link-icon:hover {
-  animation: wobble 1.5s steps(60) 1;
-  filter: drop-shadow( 0px 0px 5px #000)
+  animation: wobble 0.75s steps(60) 1;
+  filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, 0.5))
 }
 
-.get-involved--link-container {
+#get-involved--link-container1,
+#get-involved--link-container2,
+#get-involved--link-container3,
+#get-involved--link-container4 {
   margin-top: 1em;
-  background-color: #fff;
+  padding: 10px;
 }
+
+#get-involved--link-container1,
+#get-involved--link-container2,
+#get-involved--link-container3 {
+  border-right: 3px dotted rgb(255, 48, 25);
+}
+
 
 @media screen and (min-width: 40em) {
   .no-js .top-bar {
@@ -184,13 +212,57 @@ canvas{
 }
 
 @media screen and (max-width: 39.9375em) {
-  .mission, .get-involved h1, .elves-in-action h1{
+  .twinkle-container,
+  .get-involved,
+  .elves-in-action,
+  .upcoming-events {
+    padding-bottom: 1em;
+  }
+
+  .mission h1,
+  .get-involved h1,
+  .elves-in-action h1,
+  .mailer-signup h1 {
     font-size: 4em;
+  }
+
+  #get-involved--link-container1,
+  #get-involved--link-container2,
+  #get-involved--link-container3,
+  #get-involved--link-container4 {
+    margin-top: 6px;
+  }
+
+  #get-involved--link-container1 {
+    border-bottom: 3px dotted rgb(255, 48, 25);
+    border-right: 3px dotted rgb(255, 48, 25);
+  }
+
+  #get-involved--link-container2 {
+    border-bottom: 3px dotted rgb(255, 48, 25);
+    border-right: none;
+  }
+
+  #get-involved--link-container3 {
+    border-right: 3px dotted rgb(255, 48, 25);
+  }
+
+  .upcoming-events h1 {
+    font-size: 3em;
   }
   .mission-sub {
     font-size: 2.5em;
   }
 }
+
+/* MAILCHIMP Signup form*/
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+}
+
+/* END MAILCHIMP Signup form*/
 
 /* CSS motion effects*/
 
@@ -200,38 +272,35 @@ canvas{
     filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.5))
   }
   10% {
-    transform: rotate(0.1turn) scale(1.1, 1.1);
-    filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, 0.5))
+    transform: rotate(0..5turn);
   }
   20% {
     transform: rotate(0.0turn);
-    filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.5))
   }
   30% {
-    transform: rotate(-0.1turn);
-    filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, 0.5))
+    transform: rotate(-0.05turn);
   }
   40% {
-    transform: rotate(0.0turn) scale(0.9, 0.9)
+    transform: rotate(0.0turn)
   }
   50% {
-    transform: rotate(0.1turn)
+    transform: rotate(0.05turn)
   }
   60% {
     transform: rotate(0.0turn)
   }
   70% {
-    transform: rotate(-0.1turn) scale(1.1, 1.1);
-    filter: drop-shadow( 0px 0px 10px #000)
+    transform: rotate(-0.05turn);
   }
   80% {
     transform: rotate(0.0turn);
   }
   90% {
-    transform: rotate(0.5turn);
+    transform: rotate(0.05turn);
+    filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.5))
   }
   100% {
-    transform: rotate(1turn);
-    filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, 0.5))
+    transform: rotate(0.0turn);
+    filter: drop-shadow( 0px 0px 8px rgba(0, 0, 0, 0.5))
   }
 }
