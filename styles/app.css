@@ -1,3 +1,7 @@
+/***************/
+/*global styles*/
+/***************/
+
 body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
@@ -117,6 +121,55 @@ a:hover,
   height: 40px;
 }
 
+/* END MENU related */
+
+.h1-pre {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.h1-suffix {
+  font-family: Sacramento, cursive;
+}
+
+.twinkle-container,
+.get-involved,
+.elves-in-action,
+.upcoming-events {
+  padding-bottom: 8em;
+}
+
+.get-involved-get-involved h1,
+.mission h1,
+.about h1 {
+  color: rgb(255, 48, 25);
+  font-size: 8em;
+}
+
+.volunteer h1,
+.donate h1,
+.drop-off h1,
+.about-mission h1,
+.about-vision h1,
+.about-history h1,
+.get-involved h1,
+.elves-in-action h1,
+.upcoming-events h1,
+.mailer-signup h1 {
+  color: #fff;
+  font-size: 8em;
+  background-color: rgb(255, 48, 25);
+  margin-bottom: 0.5em;
+}
+
+/*********************/
+/* END global styles**/
+/*********************/
+
+/*********************/
+/* START INDEX styles*/
+/*********************/
+
 canvas {
   background-image: linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
   background-image: -o-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
@@ -130,16 +183,7 @@ canvas {
   margin-bottom: 2em;
 }
 
-.mission-pre {
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
-  font-weight: 100;
-}
-
-.mission-suffix {
-  font-family: Sacramento, cursive;
-}
-
-.mission-sub {
+.mission h2{
   color: #999;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 4em;
@@ -147,28 +191,6 @@ canvas {
 
 .get-involved {
   overflow: hidden; /* fix for animated links x-resizing page */
-}
-
-.mission h1 {
-  color: rgb(255, 48, 25);
-  font-size: 8em;
-}
-
-.twinkle-container,
-.get-involved,
-.elves-in-action,
-.upcoming-events {
-  padding-bottom: 8em;
-}
-
-.get-involved h1,
-.elves-in-action h1,
-.upcoming-events h1,
-.mailer-signup h1 {
-  color: #fff;
-  font-size: 8em;
-  background-color: rgb(255, 48, 25);
-  margin-bottom: 0.5em;
 }
 
 .get-involved h2 {
@@ -201,6 +223,19 @@ canvas {
   border-right: 3px dotted rgb(255, 48, 25);
 }
 
+/* MAILCHIMP Signup form*/
+
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+}
+
+/* END MAILCHIMP form */
+
+/***************/
+/*media queries*/
+/***************/
 
 @media screen and (min-width: 40em) {
   .no-js .top-bar {
@@ -219,6 +254,14 @@ canvas {
     padding-bottom: 1em;
   }
 
+  .get-involved-get-involved h1,
+  .volunteer h1,
+  .donate h1,
+  .drop-off h1,
+  .about-vision h1,
+  .about-mission h1,
+  .about-history h1,
+  .about h1,
   .mission h1,
   .get-involved h1,
   .elves-in-action h1,
@@ -253,13 +296,6 @@ canvas {
   .mission-sub {
     font-size: 2.5em;
   }
-}
-
-/* MAILCHIMP Signup form*/
-#mc_embed_signup {
-  background: #fff;
-  clear: left;
-  font: 14px Helvetica, Arial, sans-serif;
 }
 
 /* END MAILCHIMP Signup form*/
