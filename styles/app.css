@@ -6,6 +6,10 @@ body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
+p {
+  font-size: 1.5em;
+}
+
 a {
   color: rgb(255, 255, 255);
   font-weight: 800;
@@ -232,6 +236,33 @@ canvas {
 }
 
 /* END MAILCHIMP form */
+
+/*********************/
+/* END INDEX styles***/
+/*********************/
+
+/*********************/
+/* START ABOUT styles*/
+/*********************/
+
+.about-mission,
+.about-vision {
+  background-color: rgb(255, 48, 25);
+}
+
+.about-mission h1,
+.about-vision h1 {
+  border-bottom: 2px solid #fff;
+}
+
+.about-mission p,
+.about-vision p {
+  color: #fff;
+}
+
+/*********************/
+/* END ABOUT styles***/
+/*********************/
 
 /***************/
 /*media queries*/
