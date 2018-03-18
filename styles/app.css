@@ -143,6 +143,7 @@ a:hover,
   padding-bottom: 8em;
 }
 
+.partner h1,
 .get-involved-get-involved h1,
 .mission h1,
 .about h1 {
@@ -150,9 +151,6 @@ a:hover,
   font-size: 8em;
 }
 
-.volunteer h1,
-.donate h1,
-.drop-off h1,
 .about-mission h1,
 .about-vision h1,
 .about-history h1,
@@ -164,6 +162,11 @@ a:hover,
   font-size: 8em;
   background-color: rgb(255, 48, 25);
   margin-bottom: 0.5em;
+}
+
+.about p,
+.get-involved-get-involved p {
+  text-align: left;
 }
 
 /*********************/
@@ -190,7 +193,7 @@ canvas {
 .mission h2{
   color: #999;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .get-involved {
@@ -225,6 +228,19 @@ canvas {
 #get-involved--link-container2,
 #get-involved--link-container3 {
   border-right: 3px dotted rgb(255, 48, 25);
+}
+
+.elves-in-action-pic-container {
+  filter: grayscale(80%);
+}
+
+.elves-in-action-pic-container:hover {
+  filter: grayscale(0%);
+}
+
+.upcoming-events-announcement {
+  font-family: Sacramento, cursive;
+  font-size: 6em;
 }
 
 /* MAILCHIMP Signup form*/
@@ -264,6 +280,46 @@ canvas {
 /* END ABOUT styles***/
 /*********************/
 
+
+/****************************/
+/* START GET INVOLVED styles*/
+/****************************/
+
+.volunteer,
+.donate,
+.drop-off {
+  background-color: rgb(255, 48, 25);
+  color: #fff;
+  padding: 1em;
+}
+
+.volunteer h1,
+.donate h1,
+.drop-off h1 {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+/****************************/
+/* END GET INVOLVED styles***/
+/****************************/
+
+/***********************/
+/* START PARTNER styles*/
+/***********************/
+
+.xmas-in-jul h1,
+.service-proj h1 {
+  color: #fff;
+  font-size: 3.5em;
+}
+
+
+/***********************/
+/* END PARTNER styles***/
+/***********************/
+
 /***************/
 /*media queries*/
 /***************/
@@ -272,8 +328,19 @@ canvas {
   .no-js .top-bar {
     display: block;
   }
+
   .no-js .title-bar {
     display: none;
+  }
+
+  .mailer-signup img {
+    max-width: 450px;
+  }
+
+  .xmas-in-jul h1,
+  .service-proj h1 {
+    text-align: left;
+    padding-left: 0.5em;
   }
 }
 
@@ -285,6 +352,7 @@ canvas {
     padding-bottom: 1em;
   }
 
+  .partner h1,
   .get-involved-get-involved h1,
   .volunteer h1,
   .donate h1,
@@ -297,8 +365,29 @@ canvas {
   .get-involved h1,
   .elves-in-action h1,
   .mailer-signup h1 {
-    font-size: 4em;
+    font-size: 3em;
   }
+
+  .mission h2 {
+    font-size: 2.25em;
+  }
+
+  .mission .h1-pre,
+  .about .h1-pre,
+  .partner .h1-pre,
+  .elves-in-action .h1-pre,
+  .upcoming-events .h1-pre,
+  .mailer-signup .h1-pre {
+    display: block;
+    line-height: 0.5;
+    padding-top: 0.45em;
+  }
+
+  .about .h1-pre {
+    padding-bottom: 0.5em;
+  }
+
+  
 
   #get-involved--link-container1,
   #get-involved--link-container2,
@@ -321,11 +410,33 @@ canvas {
     border-right: 3px dotted rgb(255, 48, 25);
   }
 
+  .elves-in-action-pic-container {
+    filter: grayscale(0%);
+  }
+
   .upcoming-events h1 {
     font-size: 3em;
   }
+  .upcoming-events-announcement {
+    font-size: 2.5em;
+  }
+
   .mission-sub {
     font-size: 2.5em;
+  }
+
+  .mailer-signup img {
+    max-width: 150px;
+  }
+
+  .xmas-in-jul,
+  .service-proj {
+    align-content: center;
+  }
+
+  .xmas-in-jul .h1-pre,
+  .service-proj .h1-pre {
+    display: block;
   }
 }
 
