@@ -148,8 +148,8 @@
         } else {
           textX = canvas.width / 3 + 50;
           elfX = textX - canvas.width / 3;
-          textSize = 96 * (canvas.width / 925);
-          elfSize = 128 * (canvas.width / 925);
+          textSize = Math.round(96 * (canvas.width / 925));
+          elfSize = Math.round(128 * (canvas.width / 925));
         }
       } else {
         textSize = 52;
