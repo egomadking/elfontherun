@@ -6,6 +6,14 @@ body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
+.grid-container {
+  max-width: 75rem;
+}
+
+.body-link {
+  color: rgb(29, 155, 80);
+}
+
 p {
   font-size: 1.5em;
 }
@@ -143,6 +151,7 @@ a:hover,
   padding-bottom: 8em;
 }
 
+#how-help h1,
 .partner h1,
 .get-involved-get-involved h1,
 .mission h1,
@@ -167,6 +176,10 @@ a:hover,
 .about p,
 .get-involved-get-involved p {
   text-align: left;
+}
+
+#how-help h1{
+  background-color: #fff;
 }
 
 /*********************/
@@ -216,6 +229,9 @@ canvas {
   filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, 0.5))
 }
 
+#about--link-container1,
+#about--link-container2,
+#about--link-container3,
 #get-involved--link-container1,
 #get-involved--link-container2,
 #get-involved--link-container3,
@@ -224,19 +240,15 @@ canvas {
   padding: 10px;
 }
 
+#about--link-container1,
+#about--link-container2,
 #get-involved--link-container1,
 #get-involved--link-container2,
 #get-involved--link-container3 {
   border-right: 3px dotted rgb(255, 48, 25);
 }
 
-.elves-in-action-pic-container {
-  filter: grayscale(80%);
-}
 
-.elves-in-action-pic-container:hover {
-  filter: grayscale(0%);
-}
 
 .upcoming-events-announcement {
   font-family: Sacramento, cursive;
@@ -276,6 +288,12 @@ canvas {
   color: #fff;
 }
 
+.about-mission .h1-suffix,
+.about-vision .h1-suffix {
+  display: block;
+  margin-top: -0.5em
+}
+
 /*********************/
 /* END ABOUT styles***/
 /*********************/
@@ -285,9 +303,15 @@ canvas {
 /* START GET INVOLVED styles*/
 /****************************/
 
+.get-involved-get-involved {
+margin-bottom: 4em;
+}
+
 .volunteer,
 .donate,
-.drop-off {
+.drop-off,
+.xmas-in-jul,
+ .service-project{
   background-color: rgb(255, 48, 25);
   color: #fff;
   padding: 1em;
@@ -299,6 +323,25 @@ canvas {
     color: #fff;
     font-size: 3em;
     margin-bottom: 0.5em;
+}
+
+.testimonial-header {
+  color: rgb(255, 48, 25);
+  margin-top: 4em;
+}
+
+.testimonial {
+  background-color: rgb(190, 248, 213);
+  border-radius: 20px;
+  margin: 2em;
+  padding: 1em;
+  text-align: justify;
+  font-style: italic;
+}
+
+.testimonial p {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 /****************************/
@@ -352,6 +395,7 @@ canvas {
     padding-bottom: 1em;
   }
 
+  #how-help h1,
   .partner h1,
   .get-involved-get-involved h1,
   .volunteer h1,
@@ -372,6 +416,7 @@ canvas {
     font-size: 2.25em;
   }
 
+  #how-help .h1-pre,
   .mission .h1-pre,
   .about .h1-pre,
   .partner .h1-pre,
@@ -406,6 +451,10 @@ canvas {
     border-right: none;
   }
 
+  #get-involved-about1{
+    border-bottom: none;
+  }
+
   #get-involved--link-container3 {
     border-right: 3px dotted rgb(255, 48, 25);
   }
@@ -437,6 +486,28 @@ canvas {
   .xmas-in-jul .h1-pre,
   .service-proj .h1-pre {
     display: block;
+  }
+
+  .about-mission .h1-suffix,
+  .about-vision .h1-suffix {
+    display: inline;
+  }
+
+  .testimonial {
+    border-radius: 10px;
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: left;
+  }
+
+  .testimonial p {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+  }
+
+  .testimonial-logo img {
+    width: 50%;
+    height: auto;
   }
 }
 
