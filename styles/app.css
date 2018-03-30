@@ -353,7 +353,7 @@ margin-bottom: 4em;
 /***********************/
 
 .xmas-in-jul h1,
-.service-proj h1 {
+.service-project h1 {
   color: #fff;
   font-size: 3.5em;
 }
@@ -395,6 +395,8 @@ margin-bottom: 4em;
     padding-bottom: 1em;
   }
 
+  .xmas-in-jul h1,
+  .service-project h1,
   #how-help h1,
   .partner h1,
   .get-involved-get-involved h1,
@@ -484,7 +486,7 @@ margin-bottom: 4em;
   }
 
   .xmas-in-jul .h1-pre,
-  .service-proj .h1-pre {
+  .service-project .h1-pre {
     display: block;
   }
 
