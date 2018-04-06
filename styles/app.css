@@ -187,7 +187,32 @@ a:hover,
   background-color: rgb(29, 155, 80);
   margin-top: 2em;
   min-height: 200px;
+  padding: 0.5em;
   width: 100%;
+}
+
+.footer h1{
+  color: #fff;
+  font-size: 5em;
+  margin-top: 0.5em;
+}
+
+.soc-icon{
+  background-color: #fff;
+  border-radius: 50%;
+  height: 75px;
+  margin: auto;
+  width: 75px;
+}
+
+.soc-icon img {
+  height: 50%;
+  position: relative;
+  top: 18px;
+}
+
+.soc-media{
+  margin-top: 3.5em;
 }
 
 /***** END footer*****/
@@ -274,6 +299,10 @@ canvas {
 }
 
 /* END MAILCHIMP form */
+
+.coal {
+  margin-top: 0.5em;
+}
 
 /*********************/
 /* END INDEX styles***/
@@ -394,6 +423,22 @@ margin-bottom: 4em;
   .service-proj h1 {
     text-align: left;
     padding-left: 0.5em;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .coal {
+    margin-top: 2.5em;
+  }
+}
+
+@media screen and (max-width: 63.9375em) {
+  .footer-header .h1-suffix {
+    display: block;
+  }
+
+  .soc-media {
+    margin-top: 7em;
   }
 }
 
@@ -520,6 +565,14 @@ margin-bottom: 4em;
   .testimonial-logo img {
     width: 50%;
     height: auto;
+  }
+
+  .soc-media {
+    margin-top: 0;
+  }
+
+  .clear {
+    text-align: center;
   }
 }
 
