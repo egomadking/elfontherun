@@ -1,4 +1,4 @@
 ---
 layout: get-involved
-title: IndGet Involved
+title: Get Involved
 ---
