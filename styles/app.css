@@ -195,6 +195,7 @@ a:hover,
   color: #fff;
   font-size: 5em;
   margin-top: 0.5em;
+  line-height: 0.8em;
 }
 
 .soc-icon{
@@ -288,6 +289,11 @@ canvas {
 .upcoming-events-announcement {
   font-family: Sacramento, cursive;
   font-size: 6em;
+}
+
+.event-link {
+  color: #000;
+  font-weight: normal;
 }
 
 /* MAILCHIMP Signup form*/
@@ -433,6 +439,10 @@ margin-bottom: 4em;
 }
 
 @media screen and (max-width: 63.9375em) {
+  .footer h1 {
+    line-height: 1.2em;
+  }
+  
   .footer-header .h1-suffix {
     display: block;
   }
@@ -565,6 +575,11 @@ margin-bottom: 4em;
   .testimonial-logo img {
     width: 50%;
     height: auto;
+  }
+
+  .footer-logo {
+    padding-bottom: 2px;
+    padding-top: 10px;
   }
 
   .soc-media {
