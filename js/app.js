@@ -1,8 +1,8 @@
-(function() {
+(function () {
   if (document.getElementById('marquee')) {
     /*
-  Snow credit: https: //codepen.io/loktar00/
-  Code found at: https: //codepen.io/loktar00/pen/CHpGo?page=1&
+  Snow credit: https://codepen.io/loktar00/
+  Code found at: https://codepen.io/loktar00/pen/CHpGo
   */
 
     var flakes = [],
@@ -19,7 +19,7 @@
 
     var flakeCount = Math.round(canvas.width / 2.5);
 
-    var snow = function() {
+    var snow = function () {
       //ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (var i = 0; i < flakeCount; i++) {
         var flake = flakes[i],
@@ -68,7 +68,7 @@
       //requestAnimationFrame(snow);
     };
 
-    var resetFlake = function(flake) {
+    var resetFlake = function (flake) {
       flake.x = Math.floor(Math.random() * canvas.width);
       flake.y = 0;
       flake.size = Math.random() * 3 + 2;
@@ -78,7 +78,7 @@
       flake.opacity = Math.random() * 0.5 + 0.3;
     };
 
-    var snowInit = function() {
+    var snowInit = function () {
       for (var i = 0; i < flakeCount; i++) {
         var x = Math.floor(Math.random() * canvas.width),
           y = Math.floor(Math.random() * canvas.height),
@@ -103,21 +103,21 @@
     };
 
     /*
-  Video header words - Elves stays static so it says:
+  Hero header words - Elves stays static so it says:
       Elves
-          are running here(swipe)
-          are running there(swipe)
-          are running everywhere(swipe)
+          are running here(blink)
+          are running there(blink)
+          are running everywhere(blink)
 
   Wipes to Elf on the Run Logo - wipes to:
       Elves
-          volunteer here(swipe)
-          volunteer there(swipe)
-          volunteer everywhere(swipe)
+          volunteer here(blink)
+          volunteer there(blink)
+          volunteer everywhere(blink)
   Wipes to Elf logo and loops
   */
     var textX = 370,
-      textY = 280; 
+      textY = 280;
     var textAlign = 'left';
     var elfX = textX - 45,
       elfY = 300;
@@ -137,7 +137,7 @@
     ];
 
     //outside writeText to avoid rAF
-    var measureText = function() {
+    var measureText = function () {
       var titleBar = document.getElementsByClassName('title-bar')[0];
       if (titleBar.style.display === 'none') {
         elfY = 280; //reset when title-bar re-hides
@@ -160,14 +160,12 @@
         textAlign = 'center';
         elfX = canvas.width / 2;
         textX = canvas.width / 2;
-
-        console.log('titlebar activated!');
       }
     };
 
-    var writeText = function() {
+    var writeText = function () {
       var black = 'rgba(0,0,0,1)';
-      var green = 'rgba(255,255,255, 1)';  //var green = 'rgba(28, 237,83, 1)';
+      var green = 'rgba(255,255,255, 1)'; //var green = 'rgba(28, 237,83, 1)';
 
       //write elf
       ctx.font = elfSize + 'px Roboto';
@@ -199,7 +197,7 @@
       ctx.fillStyle = black;
     };
 
-    var flashPredicate = function() {
+    var flashPredicate = function () {
       var time = Date.now();
       if (time - oldTime > 2500 && predOpacity === 1) {
         predOpacity = 0;
@@ -212,7 +210,7 @@
       }
     };
 
-    var cycleText = function() {
+    var cycleText = function () {
       text = elvesDoing[cycle];
       text = text.split('\n');
       if (cycle < 5) {
@@ -222,7 +220,7 @@
       }
     };
 
-    var animateScreen = function() {
+    var animateScreen = function () {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       flashPredicate();
       snow();
@@ -230,7 +228,7 @@
       requestAnimationFrame(animateScreen);
     };
 
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
       container = document.getElementById('marquee');
       dimensions = container.getBoundingClientRect();
       canvas.width = dimensions.width;
