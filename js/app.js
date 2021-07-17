@@ -242,3 +242,18 @@
     snowInit();
   }
 })();
+
+
+const toggleModal = (()=>{
+
+  const archiveModal = document.querySelector(".archive-modal")
+  const body = document.querySelector("body")
+  const navMenu = document.querySelector("#nav-menu")
+  
+  return ()=> {
+    archiveModal.setAttribute("style", `top: ${window.scrollY + 300}px`)
+    archiveModal.classList.toggle("is-hidden")
+    body.classList.toggle("overflow-hidden")
+    navMenu.classList.toggle("is-blurred-and-disabled")
+  }
+})()
