@@ -25,8 +25,13 @@ a {
 }
 
 a:hover,
+.false-link:hover,
 .dropdown.menu .is-active>a {
   color: rgb(132, 252, 180);
+}
+
+.false-link:hover {
+  cursor: pointer;
 }
 
 .button,
@@ -45,6 +50,75 @@ a:hover,
 
 .button:focus {
   background-color: rgb(255, 48, 25);
+}
+
+/* ARCHIVE MODAL Related */
+
+.archive-modal {
+  z-index: 1;
+  position: absolute;
+  width: 80vw;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.6);
+}
+
+.archive-modal>div {
+  padding: 1em;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 10px solid rgb(255, 48, 25);
+}
+
+.archive-modal::before {
+  content: "";
+  position: absolute;
+  top: -500px;
+  left: -500px;
+  height: 1000vh;
+  width: 1000vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  backdrop-filter: blur(6px);
+}
+
+.archive-modal-dismiss {
+  content: "✕";
+  text-align: center;
+  position: absolute;
+  top: -33px;
+  right: -33px;
+  background-color: white;
+  border: 6px solid red;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  vertical-align: middle;
+  margin: auto;
+  padding-top: 0px;
+  font-size: 3em;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.archive-modal a {
+  color: #2ba6cb;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.is-blurred-and-disabled {
+  pointer-events: none;
+  filter: blur(5px)
 }
 
 /*MENU related*/
@@ -178,7 +252,7 @@ a:hover,
   text-align: left;
 }
 
-#how-help h1{
+#how-help h1 {
   background-color: #fff;
 }
 
@@ -191,14 +265,14 @@ a:hover,
   width: 100%;
 }
 
-.footer h1{
+.footer h1 {
   color: #fff;
   font-size: 5em;
   margin-top: 0.5em;
   line-height: 0.8em;
 }
 
-.soc-icon{
+.soc-icon {
   background-color: #fff;
   border-radius: 50%;
   height: 75px;
@@ -212,7 +286,7 @@ a:hover,
   top: 18px;
 }
 
-.soc-media{
+.soc-media {
   margin-top: 3.5em;
 }
 
@@ -232,21 +306,22 @@ canvas {
   background-image: -moz-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
   background-image: -webkit-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
   background-image: -ms-linear-gradient(bottom, rgb(255, 48, 25) 0%, rgb(207, 4, 4) 84%);
-  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(255, 48, 25)), color-stop(0.84, rgb(207, 4, 4)));
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(255, 48, 25)), color-stop(0.84, rgb(207, 4, 4)));
 }
 
 .twinkle-container {
   margin-bottom: 2em;
 }
 
-.mission h2{
+.mission h2 {
   color: #999;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 3em;
 }
 
 .get-involved {
-  overflow: hidden; /* fix for animated links x-resizing page */
+  overflow: hidden;
+  /* fix for animated links x-resizing page */
 }
 
 .get-involved h2 {
@@ -262,7 +337,7 @@ canvas {
 
 .get-involved--link-icon:hover {
   animation: wobble 0.75s steps(60) 1;
-  filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, 0.5))
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5))
 }
 
 #about--link-container1,
@@ -349,14 +424,14 @@ canvas {
 /****************************/
 
 .get-involved-get-involved {
-margin-bottom: 4em;
+  margin-bottom: 4em;
 }
 
 .volunteer,
 .donate,
 .drop-off,
 .xmas-in-jul,
- .service-project{
+.service-project {
   background-color: rgb(255, 48, 25);
   color: #fff;
   padding: 1em;
@@ -365,9 +440,9 @@ margin-bottom: 4em;
 .volunteer h1,
 .donate h1,
 .drop-off h1 {
-    color: #fff;
-    font-size: 3em;
-    margin-bottom: 0.5em;
+  color: #fff;
+  font-size: 3em;
+  margin-bottom: 0.5em;
 }
 
 .testimonial-header {
@@ -442,7 +517,7 @@ margin-bottom: 4em;
   .footer h1 {
     line-height: 1.2em;
   }
-  
+
   .footer-header .h1-suffix {
     display: block;
   }
@@ -453,6 +528,7 @@ margin-bottom: 4em;
 }
 
 @media screen and (max-width: 39.9375em) {
+
   .twinkle-container,
   .get-involved,
   .elves-in-action,
@@ -499,7 +575,7 @@ margin-bottom: 4em;
     padding-bottom: 0.5em;
   }
 
-  
+
 
   #get-involved--link-container1,
   #get-involved--link-container2,
@@ -518,7 +594,7 @@ margin-bottom: 4em;
     border-right: none;
   }
 
-  #get-involved-about1{
+  #get-involved-about1 {
     border-bottom: none;
   }
 
@@ -533,6 +609,7 @@ margin-bottom: 4em;
   .upcoming-events h1 {
     font-size: 3em;
   }
+
   .upcoming-events-announcement {
     font-size: 2.5em;
   }
@@ -598,38 +675,48 @@ margin-bottom: 4em;
 @keyframes wobble {
   0% {
     transform: rotate(0turn);
-    filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.5))
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))
   }
+
   10% {
     transform: rotate(0..5turn);
   }
+
   20% {
     transform: rotate(0.0turn);
   }
+
   30% {
     transform: rotate(-0.05turn);
   }
+
   40% {
     transform: rotate(0.0turn)
   }
+
   50% {
     transform: rotate(0.05turn)
   }
+
   60% {
     transform: rotate(0.0turn)
   }
+
   70% {
     transform: rotate(-0.05turn);
   }
+
   80% {
     transform: rotate(0.0turn);
   }
+
   90% {
     transform: rotate(0.05turn);
     filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.5))
   }
+
   100% {
     transform: rotate(0.0turn);
-    filter: drop-shadow( 0px 0px 8px rgba(0, 0, 0, 0.5))
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5))
   }
 }
